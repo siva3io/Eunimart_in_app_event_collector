@@ -1,0 +1,121 @@
+{
+    "_id": {
+        "$oid": "5eafe94e0eec4a0c1a106040"
+    },
+    "event_log_data": {
+        "upshot": {
+            "upshot_integration": {
+                "parameters": {
+                    "properties": {
+                        "response": {
+                            "ref": "outputs/response"
+                        },
+                        "request": {
+                            "ref": "outputs/request"
+                        }
+                    }
+                },
+                "mapping": {
+                    "conversion": {
+                        "type": ""
+                    },
+                    "properties": {
+                        "data": {
+                            "properties": {
+                                "eventId": {
+                                    "default_value": "user_registration"
+                                },
+                                "eventName": {
+                                    "default_value": "User Registration"
+                                },
+                                "platform": {
+                                    "default_value": "web"
+                                },
+                                "appuid": {
+                                    "ref": "parameters/response/data/account_id"
+                                },
+                                "userId": {
+                                    "default_value": "1223566"
+                                },
+                                "sessionId": {
+                                    "default_value": {
+                                        "$numberInt": "1234567"
+                                    }
+                                },
+                                "startTime": {
+                                    "operation": {
+                                        "type": "utc_time_stamp"
+                                    }
+                                },
+                                "endTime": {
+                                    "operation": {
+                                        "type": "utc_time_stamp"
+                                    }
+                                },
+                                "tzoffset": {
+                                    "operation": {
+                                        "type": "utc_time_stamp"
+                                    }
+                                }
+                                
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                },
+                "outputs": {
+                    "success": {
+                        "properties": {
+                            "mapped_data": {
+                                "ref": "mapping"
+                            }
+                        }
+                    },
+                    "error": {
+                        "properties": {
+                            "error_code": {
+                                "ref": "error_code"
+                            },
+                            "error_message": {
+                                "default_value": ""
+                            }
+                        }
+                    }
+                },
+                "name": "upshot integration",
+                "event_type": "data_mapping",
+                "description": "User Registration"
+            }
+        },
+        "zoho":{
+
+        }
+    },
+    "is_event_disabled": {
+        "$numberInt": "1"
+    },
+    "path": "/api/v2/users/register/user",
+    "_requestMethod": "post",
+    "service_name": "Identity Provider",
+    "service_key": "identity_provider",
+    "event_name": "User Registration",
+    "event_key": "user_registration",
+    "event_log": {
+        "in_zoho": true,
+        "in_upshot": true
+    },
+    "__v": {
+        "$numberInt": "0"
+    },
+    "cd": {
+        "$date": {
+            "$numberLong": "1588586830651"
+        }
+    },
+    "ud": {
+        "$date": {
+            "$numberLong": "1588586830651"
+        }
+    }
+}

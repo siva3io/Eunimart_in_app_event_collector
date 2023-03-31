@@ -1,0 +1,42 @@
+{
+    "request":{
+       "url":"/api/v2/users/login",
+       "headers":{
+          "content-type":"application/json",
+          "user-agent":"PostmanRuntime/7.24.1",
+          "accept":"*/*",
+          "cache-control":"no-cache",
+          "postman-token":"e18bce07-addf-46c7-9866-c25be92815d2",
+          "host":"localhost:3001",
+          "accept-encoding":"gzip, deflate, br",
+          "connection":"keep-alive",
+          "content-length":"91"
+       },
+       "queryParameters":{
+ 
+       },
+       "payload":{
+          "data":{
+             "email":"rahul18@navgurukul.org",
+             "password":"",
+             "password_confirmation":""
+          }
+       }
+    },
+    "response":{
+       "status":true,
+       "data":{
+          "user_id":"bfe34c61-0bc4-4ddb-810f-269f5d30d82d",
+          "account_id":"e93b9c51-f2c2-4a81-9315-22d48c6f4149",
+          "new_user":true,
+          "first_name":null,
+          "last_name":null,
+          "profile_picture":null,
+          "role_id":4,
+          "is_email_verified":0
+       },
+       "setToken":true,
+       "message":"Sucessfully Logged In"
+    }
+ }
+ ABOUT
